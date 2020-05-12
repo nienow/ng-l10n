@@ -1,0 +1,32 @@
+<div class="flex">
+  <div class="example">
+    <div class="example__title">Model Value</div>
+    <div class="example__display">{{decimalValue}}</div>
+  </div>
+
+  <div class="example">
+    <div class="example__title">Locale</div>
+    <select class="example__display" [(ngModel)]="locale" (change)="changeLocale()">
+      <option *ngFor="let item of locales">{{item}}</option>
+    </select>
+  </div>
+</div>
+
+<div class="example">
+  <div class="example__title">Input field</div>
+  <div class="example__display">The input field should be type "text" instead of "number", so that the user can use symbols of other locales.</div>
+  <pre><code class="example__code" [innerText]="code.one"></code></pre>
+  <div class="example__display"><input type="text" l10n-number [(ngModel)]="decimalValue"></div>
+</div>
+
+<div class="example">
+  <div class="example__title">Number display</div>
+  <pre><code class="example__code" [innerText]="code.two"></code></pre>
+  <div class="example__display"><lib-number [value]="decimalValue"></lib-number></div>
+</div>
+
+<div class="example">
+  <div class="example__title">Service</div>
+  <pre><code class="example__code" [innerText]="code.service"></code></pre>
+  <div
+</div>

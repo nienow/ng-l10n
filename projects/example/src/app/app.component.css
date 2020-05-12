@@ -1,0 +1,23 @@
+.example {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.example__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.example__model,
+.example__display {
+  padding: 5px;
+}
+
+.example__code {
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+}

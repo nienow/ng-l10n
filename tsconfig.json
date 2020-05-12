@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "ng-l10n-lib": [
-        "dist/ng-l10n-lib"
+      "ngx-decimal": [
+        "dist/ngx-decimal"
       ],
-      "ng-l10n-lib/*": [
-        "dist/ng-l10n-lib/*"
+      "ngx-decimal/*": [
+        "dist/ngx-decimal/*"
       ]
     }
   }

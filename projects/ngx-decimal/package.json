@@ -1,0 +1,9 @@
+{
+  "name": "ngx-decimal",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "~9.1.4",
+    "@angular/core": "~9.1.4",
+    "@angular/forms": "~9.1.4"
+  }
+}
