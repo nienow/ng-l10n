@@ -11,11 +11,11 @@ export class AppComponent {
   locales = LOCALE_LIST;
   locale;
   decimalValue = 1234.56;
-  percentValue = 0.38499;
+  // percentValue = 0.38499;
 
   code = {
     one: '<input type="text" ngxDecimal [(ngModel)]="decimalValue">',
-    two: '<lib-number [value]="decimalValue"></lib-number>',
+    two: '<ngx-decimal [value]="decimalValue"></ngx-decimal>',
     service: 'stuff'
   };
 

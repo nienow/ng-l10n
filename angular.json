@@ -6,7 +6,7 @@
     "example": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/example",
+      "root": "",
       "sourceRoot": "projects/example/src",
       "prefix": "app",
       "architect": {

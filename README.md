@@ -4,7 +4,7 @@ This is a number format library for Angular 2+.
 
 ## Input field directive
 
-The `ngx-decimal` directive can be used to allow entry of a number in any locale. 
+The `ngx-decimal` directive can be used to allow entry of a number in any locale. The type should be `text` instead of `number`, since `number` doesn't support other locales. 
 
 ```html
 <input type="text" ngxDecimal [(ngModel)]="numberValue">
@@ -40,7 +40,7 @@ constructor(private decimalService: NgxDecimalService) {}
 
 ### Locale
 
-By default, the locale of the user's browser will be used to format the numbers. But the locale can be set manually.
+By default, the locale of the user's browser will be used to format the numbers. The locale can also be set manually.
 
 #### Set locale
 
