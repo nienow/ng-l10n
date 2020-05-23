@@ -5,7 +5,7 @@ function transformSpaces(str: string) {
   return str.replace(/\s/, ' ');
 }
 
-describe('NgL10nLibService', () => {
+describe('DecimalService', () => {
   let service: NgxDecimalService;
   beforeEach(() => {
     service = new NgxDecimalService();
@@ -21,6 +21,9 @@ describe('NgL10nLibService', () => {
     service.setLocale('fr-FR');
     expect(transformSpaces(service.formatNumber(1234.56))).toEqual('1 234,56');
     expect(transformSpaces(service.formatNumber(-1234.56))).toEqual('-1 234,56');
+    service.setLocale('es-ES');
+    expect(service.formatNumber(1234.56)).toEqual('1234,56');
+    expect(service.formatNumber(-1234.56)).toEqual('-1234,56');
   });
 
   it('should format percent', () => {
@@ -48,6 +51,8 @@ describe('NgL10nLibService', () => {
     expect(service.parseNumber('')).toEqual(null);
     service.setLocale('de-DE');
     expect(service.parseNumber('1.234,56')).toEqual(1234.56);
+    service.setLocale('es-ES');
+    expect(service.parseNumber('1234,56')).toEqual(1234.56);
   });
 
   it('should return NaN if parsing invalid number', () => {

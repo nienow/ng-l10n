@@ -110,12 +110,20 @@ export class NgxDecimalService {
     if (value === null || value === undefined) {
       return '';
     }
-    return new Intl.NumberFormat(this.locale.value, options).format(value);
+    return new Intl.NumberFormat(this.locale.value, {
+      maximumFractionDigits: 20, // don't strip off any fractions
+      ...options
+    }).format(value);
   }
 
   private determineSymbols(locale: string): void {
     const testFormat = new Intl.NumberFormat(locale, {style: 'decimal'}).format(10000 / 3);
     this.groupSymbol = testFormat[1];
-    this.decimalSymbol = testFormat[5];
+    if (/[0-9]/.test(this.groupSymbol)) {
+      this.groupSymbol = ''; // no group symbol
+      this.decimalSymbol = testFormat[4];
+    } else {
+      this.decimalSymbol = testFormat[5];
+    }
   }
 }

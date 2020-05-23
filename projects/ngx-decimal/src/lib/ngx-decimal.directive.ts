@@ -23,7 +23,7 @@ import { NgxDecimalService } from './ngx-decimal.service';
 })
 export class NgxDecimalDirective implements ControlValueAccessor {
 
-  value;
+  value: number;
 
   constructor(private decimalService: NgxDecimalService, private renderer: Renderer2, private elementRef: ElementRef) {
     this.decimalService.watchLocaleChange().subscribe(() => {
@@ -33,7 +33,8 @@ export class NgxDecimalDirective implements ControlValueAccessor {
 
   @HostListener('input', ['$event'])
   public onInput($event) {
-    this.onChange(this.decimalService.parseNumber($event.target.value));
+    this.value = this.decimalService.parseNumber($event.target.value);
+    this.onChange(this.value);
     this.onTouched();
   }
 

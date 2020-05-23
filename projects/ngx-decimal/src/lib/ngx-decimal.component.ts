@@ -36,7 +36,7 @@ export abstract class NgxDecimalAbstractComponent implements OnInit, OnDestroy, 
 }
 
 @Component({
-  selector: 'lib-number',
+  selector: 'ngx-decimal',
   template: `{{output}}`
 })
 export class NgxDecimalComponent extends NgxDecimalAbstractComponent {
@@ -46,7 +46,7 @@ export class NgxDecimalComponent extends NgxDecimalAbstractComponent {
 }
 
 @Component({
-  selector: 'lib-percent',
+  selector: 'ngx-decimal-percent',
   template: `{{output}}`
 })
 export class NgxDecimalPercentComponent extends NgxDecimalAbstractComponent {
@@ -56,7 +56,7 @@ export class NgxDecimalPercentComponent extends NgxDecimalAbstractComponent {
 }
 
 @Component({
-  selector: 'lib-currency',
+  selector: 'ngx-decimal-currency',
   template: `{{output}}`
 })
 export class NgxDecimalCurrencyComponent extends NgxDecimalAbstractComponent {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgxDecimalService } from '../../../ngx-decimal/src/lib/ngx-decimal.service';
+import { LOCALE_LIST } from './locales';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,13 @@ import { NgxDecimalService } from '../../../ngx-decimal/src/lib/ngx-decimal.serv
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  locales = [
-    'en-US',
-    'de-DE'
-  ];
+  locales = LOCALE_LIST;
   locale;
   decimalValue = 1234.56;
   percentValue = 0.38499;
 
   code = {
-    one: '<input type="text" l10n-number [(ngModel)]="decimalValue">',
+    one: '<input type="text" ngxDecimal [(ngModel)]="decimalValue">',
     two: '<lib-number [value]="decimalValue"></lib-number>',
     service: 'stuff'
   };
