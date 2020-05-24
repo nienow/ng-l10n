@@ -1,19 +1,23 @@
 import {
   Component,
+  Directive,
   Input,
   OnChanges,
   OnDestroy,
   OnInit,
+  Optional,
   SimpleChanges
 } from '@angular/core';
 import { NgxDecimalService } from './ngx-decimal.service';
 import { Subscription } from 'rxjs';
 
+@Directive()
+// tslint:disable-next-line:directive-class-suffix
 export abstract class NgxDecimalAbstractComponent implements OnInit, OnDestroy, OnChanges {
   @Input() value: number;
   output: string;
   localeSubscription: Subscription;
-  public constructor(protected decimalService: NgxDecimalService) {
+  constructor(@Optional() protected decimalService: NgxDecimalService) {
   }
 
   ngOnInit() {

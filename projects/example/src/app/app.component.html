@@ -14,7 +14,6 @@
 
 <div class="example">
   <div class="example__title">Input field</div>
-  <div class="example__display">The input field should be type "text" instead of "number", so that the user can use symbols of other locales.</div>
   <pre><code class="example__code" [innerText]="code.one"></code></pre>
   <div class="example__display"><input type="text" ngxDecimal [(ngModel)]="decimalValue"></div>
 </div>
@@ -23,9 +22,4 @@
   <div class="example__title">Number display</div>
   <pre><code class="example__code" [innerText]="code.two"></code></pre>
   <div class="example__display"><ngx-decimal [value]="decimalValue"></ngx-decimal></div>
-</div>
-
-<div class="example">
-  <div class="example__title">Service</div>
-  <pre><code class="example__code" [innerText]="code.service"></code></pre>
 </div>

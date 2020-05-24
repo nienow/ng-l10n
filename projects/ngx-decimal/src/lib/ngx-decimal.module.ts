@@ -10,6 +10,7 @@ import {
   NgxDecimalPercentPipe,
   NgxDecimalPipe
 } from './ngx-decimal.pipe';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {
     NgxDecimalPercentPipe,
     NgxDecimalCurrencyPipe
   ],
-  imports: [],
+  imports: [CommonModule],
   exports: [
     NgxDecimalDirective,
     NgxDecimalComponent,

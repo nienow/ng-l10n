@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { NgxDecimalModule } from '../../../ngx-decimal/src/lib/ngx-decimal.module';
+import { NgxDecimalModule } from 'ngx-decimal';
 
 @NgModule({
   declarations: [
