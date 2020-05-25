@@ -10,12 +10,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "prepare": "ng build ngx-decimal --prod",
+    "copy": "copyfiles README.md dist/ngx-decimal",
     "publish": "npm publish ./dist/ngx-decimal"
   },
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/nienow/ngx-decimal.git"
+    "url": "git+https://github.com/nienow/ngx-decimal.git"
   },
   "dependencies": {
     "@angular/animations": "^9.1.0",
@@ -37,10 +38,11 @@
     "@angular/cli": "^9.1.0",
     "@angular/compiler-cli": "^9.1.0",
     "@angular/language-service": "^9.1.0",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "^3.3.8",
     "@types/jasminewd2": "^2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "copyfiles": "^2.2.0",
     "jasmine-core": "^3.4.0",
     "jasmine-spec-reporter": "^4.2.1",
     "karma": "^4.1.0",
@@ -53,5 +55,9 @@
     "ts-node": "^7.0.0",
     "tslint": "^5.15.0",
     "typescript": "^3.8.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/nienow/ngx-decimal/issues"
+  },
+  "homepage": "https://github.com/nienow/ngx-decimal#readme"
 }
