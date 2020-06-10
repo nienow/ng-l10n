@@ -23,3 +23,12 @@
   <pre><code class="example__code" [innerText]="code.two"></code></pre>
   <div class="example__display"><ngx-decimal [value]="decimalValue"></ngx-decimal></div>
 </div>
+
+<div class="example">
+  <div class="example__title">Currency display</div>
+  <div class="example__display"><ngx-decimal-currency [value]="decimalValue" isoCode="USD"></ngx-decimal-currency></div>
+</div>
+<div class="example">
+  <div class="example__title">Percent display</div>
+  <div class="example__display"><ngx-decimal-percent [value]="decimalValue"></ngx-decimal-percent></div>
+</div>

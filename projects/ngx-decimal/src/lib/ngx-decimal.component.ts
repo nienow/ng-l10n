@@ -22,13 +22,13 @@ export abstract class NgxDecimalAbstractComponent implements OnInit, OnDestroy, 
 
   ngOnInit() {
     this.localeSubscription = this.decimalService.watchLocaleChange().subscribe(() => {
-      this.output = this.decimalService.formatNumber(this.value);
+      this.output = this.format();
     });
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.value) {
-      this.output = this.decimalService.formatNumber(this.value);
+      this.output = this.format();
     }
   }
 
@@ -45,7 +45,7 @@ export abstract class NgxDecimalAbstractComponent implements OnInit, OnDestroy, 
 })
 export class NgxDecimalComponent extends NgxDecimalAbstractComponent {
   format() {
-    this.output = this.decimalService.formatNumber(this.value);
+    return this.decimalService.formatNumber(this.value);
   }
 }
 
@@ -55,7 +55,7 @@ export class NgxDecimalComponent extends NgxDecimalAbstractComponent {
 })
 export class NgxDecimalPercentComponent extends NgxDecimalAbstractComponent {
   format() {
-    this.output = this.decimalService.formatPercent(this.value);
+    return this.decimalService.formatPercent(this.value);
   }
 }
 
@@ -66,6 +66,6 @@ export class NgxDecimalPercentComponent extends NgxDecimalAbstractComponent {
 export class NgxDecimalCurrencyComponent extends NgxDecimalAbstractComponent {
   @Input() isoCode: string;
   format() {
-    this.output = this.decimalService.formatCurrency(this.value, this.isoCode);
+    return this.decimalService.formatCurrency(this.value, this.isoCode);
   }
 }

@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "prepare": "ng build ngx-decimal --prod",
     "copy": "copyfiles README.md dist/ngx-decimal",
-    "publish": "npm publish ./dist/ngx-decimal"
+    "publish": "npm run prepare & npm run copy & npm publish ./dist/ngx-decimal"
   },
   "private": true,
   "repository": {

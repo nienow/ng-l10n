@@ -1,6 +1,6 @@
 # ngx-decimal
 
-This is a number format library for Angular 2+. 
+This is a number format library for Angular. 
 
 ## Input field directive
 
